@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Serif', serif;
+}
+.container{
+    width: 100%;
+}
+button{
+    background-color: #FF5722;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin-top: 25px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+}
+p{    
+    font-size: 1.3rem;
+}
+/* Heading Part */
+header{
+    position: relative;
+    background-color:#222831;
+    width: 100%;
+    height: 670px;
+}
+/* Heading Part -> Background Image */
+.background-img{
+    position: relative;
+    width: 100%;
+    opacity: 0.4;
+    background-size: cover;
+}
+
+/* Heading Part -> Menu Bar */
+header .menu-bar{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 4%;
+    display: flex;
+    line-height: 2rem;
+}
+/* Heading Part -> Menu Bar -> LOGO */
+#logo{
+    font-family: 'Mrs Sheppards', cursive;
+    color: #fff;
+}
+/* Heading Part -> Menu Bar -> LINK */
+.menu-bar a{
+    padding-left: 20px;
+    color:#FF5722;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+/* Heading Part -> Menu Bar -> Humbargar */
+.hamburger-menu{
+    display: flex;
+    align-items: center;
+    width: 30px;
+    cursor: pointer;
+    padding-left: 20px;
+}
+.burger-stack, 
+.burger-stack::after,
+.burger-stack::before{
+    width: 30px;
+    height: 4px;
+    background-color: #FF5722;
+    border-radius: 2px;
+    transition: all;
+}
+.burger-stack::before,
+.burger-stack::after{
+    content: '';
+    position: absolute;
+    transition-duration: 0.5s;
+}
+.burger-stack::before{
+    transform: translateY(-10px);
+}
+.burger-stack::after{
+    transform: translateY(10px);
+}
+.open-burger .burger-stack{
+    background: transparent;
+}
+.open-burger .burger-stack::before{
+    transform: rotate(45deg);
+}
+.open-burger .burger-stack::after{
+    transform: rotate(-45deg);
+}
+
+/* Heading Part -> Heading */
+header .heading{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+/* Heading Part -> Heading -> Restaurant Title */
+.heading h1{
+    font-size: 6rem;
+    font-family: 'Sofia', cursive;
+}
+
+/* Contact Part */
+#contact-part{
+    background-color:#EEEEEE;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#contact-part #contact-us,
+#contact-part .contact-card{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+#contact-us{
+    width: 30%;
+    justify-content: space-between;
+}
+#contact-us h2{
+    margin-bottom: 50px;
+}
+#contact-us i{
+    font-size: 1.5rem;
+    padding-right: 20px;
+}
+#contact-us a img{
+    width: 30px;
+    height: 30px;
+    padding-right: 20px;
+}
+.contact-card{
+    width: 20%;
+    border-radius: 50px;
+    border: 2px solid #707070;
+    align-items: center;
+    justify-content: center;
+}
+.contact-card img{
+    width: 80px;
+    height: 80px;
+}
+
+
+
+/* Screen Width is below 600px */
+@media only screen and (max-width: 600px) {
+/*     .background-img{
+        height: 400px;
+        width: 100%;
+        background-size: cover;
+    } */
+
+/* Heading Part -> Menu Bar */
+    header .menu-bar{
+        width: 90%;
+    }
+
+/* Heading Part -> Menu Bar -> LINK */
+    .menu-bar a{
+        font-size: 0.9rem;
+    }
+/* Heading Part -> Heading -> Restaurant Title */
+    .heading h1{
+        font-size: 2rem;
+    }
+}
